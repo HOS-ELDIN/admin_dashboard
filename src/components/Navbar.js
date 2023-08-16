@@ -52,10 +52,13 @@ const Navbar = () => {
 		window.addEventListener("resize", handleResize);
 		handleResize();
 		return () => window.removeEventListener("resize", handleResize);
+
+		/* eslint-disable-next-line */
 	}, []);
 
 	useEffect(() => {
 		screenSize <= 900 ? setActiveMenu(false) : setActiveMenu(true);
+		/* eslint-disable-next-line */
 	}, [screenSize]);
 
 	return (

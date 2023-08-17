@@ -1,9 +1,9 @@
-// import React from 'react'
+import React from 'react'
 
-// const page = () => {
-//   return (
-//     <div>customers</div>
-//   )
-// }
+const page = () => {
+  return (
+    <div>customers</div>
+  )
+}
 
-// export default page
+export default page

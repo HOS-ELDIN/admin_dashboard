@@ -8,16 +8,15 @@ import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+// import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
 import avatar from "../../public/data/avatar.jpg";
 import { Cart, Chat, Notification, UserProfile } from "@/components";
 import Image from "next/image";
-import { resize } from "@syncfusion/ej2/maps";
 
 const NavButton = ({ title, icon, customFunc, color, dotColor }) => {
 	return (
-		<TooltipComponent content={title} position="BottomCenter">
+		// <TooltipComponent content={title} position="BottomCenter">
 			<button
 				tybe="button"
 				style={{ color: color }}
@@ -30,7 +29,7 @@ const NavButton = ({ title, icon, customFunc, color, dotColor }) => {
 				/>
 				{icon}
 			</button>
-		</TooltipComponent>
+		// </TooltipComponent>
 	);
 };
 
@@ -97,7 +96,7 @@ const Navbar = () => {
 							dotColor={"#03c9d7"}
 						/>
 
-						<TooltipComponent content={"profile"} position="BottomCenter">
+						{/* <TooltipComponent content={"profile"} position="BottomCenter"> */}
 							<div
 								className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg "
 								onClick={() => handleClick("userProfile")}
@@ -113,7 +112,7 @@ const Navbar = () => {
 								</p>
 								<MdKeyboardArrowDown className="text-gray-400 text-14" />
 							</div>
-						</TooltipComponent>
+						{/* </TooltipComponent> */}
 
 						{isClicked.cart && <Cart />}
 						{isClicked.chat && <Chat />}

@@ -1,6 +1,6 @@
 "use client";
 
-import  EcomPage  from "./(pages)/ecommerce/page";
+import EcomPage from "./(pages)/ecommerce/page";
 
 export default EcomPage;
 

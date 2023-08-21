@@ -69,7 +69,7 @@ const Navbar = () => {
 						icon={<AiOutlineMenu />}
 						customFunc={() => setActiveMenu((prev) => !prev)}
 						color={"blue"}
-						dotColor={""}
+						dotColor={"red"}
 					/>
 					<div className="flex">
 						<NavButton
@@ -77,7 +77,7 @@ const Navbar = () => {
 							icon={<FiShoppingCart />}
 							customFunc={() => handleClick("cart")}
 							color={"blue"}
-							dotColor={""}
+							dotColor={"red"}
 						/>
 
 						<NavButton
@@ -107,7 +107,7 @@ const Navbar = () => {
 									className="rounded-full w-8 h-8"
 								/>
 								<p className="text-gray-400 text-14">
-									<span className="">Hi, </span>
+									<span>Hi, </span>
 									<span className=" font-bold ml-1"> Hossam</span>
 								</p>
 								<MdKeyboardArrowDown className="text-gray-400 text-14" />

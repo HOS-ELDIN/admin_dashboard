@@ -1,13 +1,8 @@
 "use client";
+import EcomPage from "@/app/(pages)/ecommerce/page";
 
-import EcomPage from "./(pages)/ecommerce/page";
 
-export default EcomPage;
-
+export default EcomPage
 // export default function Home() {
-// 	return (
-// 		<div>
-// 			<EcomPage />
-// 		</div>
-// 	);
+// 	return <main></main>;
 // }

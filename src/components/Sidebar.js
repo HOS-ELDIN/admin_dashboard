@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SiShopware } from "react-icons/si";
 import { MdOutlineCancel } from "react-icons/md";
-// import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { links } from "../../public/data/dummy";
 import { useStateContext } from "@/contexts/ContextProvider";
 
@@ -45,15 +45,15 @@ const Sidebar = () => {
 								<SiShopware /> <span>shoppy</span>
 							</Link>
 
-							{/* <TooltipComponent content="Menu" position="BottomCenter"> */}
-							<button
-								type="button"
-								onClick={handleCloseSidebar}
-								className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
-							>
-								<MdOutlineCancel />
-							</button>
-							{/* </TooltipComponent> */}
+							<TooltipComponent content="Menu" position="BottomCenter">
+								<button
+									type="button"
+									onClick={handleCloseSidebar}
+									className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
+								>
+									<MdOutlineCancel />
+								</button>
+							</TooltipComponent>
 						</div>
 						<div className="mt-10 ">
 							{links.map((category) => (

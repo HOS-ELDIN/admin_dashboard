@@ -1,3 +1,4 @@
+"use client";
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
 import { Navbar, Sidebar, SettingIcon } from "@/components";
@@ -27,7 +28,7 @@ export default function RootLayout({ children }) {
 
 						<div className="min-h-screen dark:bg-main-dark-bg bg-main-bg w-full">
 							<Navbar />
-							<div className="mt-12">{children}</div>
+							<div className="md:mt-4 mt-16">{children}</div>
 						</div>
 					</main>
 				</ContextProvider>

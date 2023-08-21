@@ -1,5 +1,5 @@
 {
-  "name": "admin_dashboard",
+  "name": "admin__dashboard",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@syncfusion/ej2": "^22.2.8",
+    "@syncfusion/ej2": "^22.2.9",
+    "@syncfusion/ej2-react-calendars": "^22.2.9",
+    "@syncfusion/ej2-react-charts": "^22.2.9",
+    "@syncfusion/ej2-react-dropdowns": "^22.2.9",
+    "@syncfusion/ej2-react-grids": "^22.2.9",
+    "@syncfusion/ej2-react-inputs": "^22.2.9",
+    "@syncfusion/ej2-react-kanban": "^22.2.9",
+    "@syncfusion/ej2-react-popups": "^22.2.9",
+    "@syncfusion/ej2-react-richtexteditor": "^22.2.9",
+    "@syncfusion/ej2-react-schedule": "^22.2.8",
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
-    "eslint-config-next": "13.4.13",
-    "next": "^13.4.16",
-    "postcss": "8.4.27",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
+    "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",

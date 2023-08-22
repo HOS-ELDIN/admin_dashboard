@@ -22,7 +22,7 @@ const CustomersPage = () => {
 
 	return (
 		<div className={activeMenu ? " md:ml-72 " : " w-full flex-2"}>
-			<div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
+			<div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl dark:text-gray-200 dark:bg-secondary-dark-bg">
 				<Header title={"Customers"} category={"Page"} />
 				<GridComponent
 					dataSource={customersData}

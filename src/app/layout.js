@@ -1,3 +1,4 @@
+"use client";
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
 import { Navbar, Sidebar, ThemeWindow } from "@/components";
@@ -18,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={`${open.variable} `}>
+		<html lang="en" className={`${open.variable} `} id="base-html">
 			<body className={open.className}>
 				<ContextProvider>
 					<main className="flex relative dark:bg-main-dark-bg ">

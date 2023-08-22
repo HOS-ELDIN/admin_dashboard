@@ -9,7 +9,7 @@ const change = (args) => {
     args.currentValue.hex;
 };
 
-const EditorPage = () => {
+const ColorPickerPage = () => {
   const { activeMenu } = useStateContext();
   return (
     <div className={activeMenu ? " md:ml-72 " : " w-full flex-2"}>
@@ -47,4 +47,4 @@ const EditorPage = () => {
   );
 };
 
-export default EditorPage;
+export default ColorPickerPage;

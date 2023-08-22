@@ -8,7 +8,9 @@ import { Header } from "@/components";
 const change = (args) => {
   document.getElementById("preview").style.backgroundColor =
     args.currentValue.hex;
-  const ColorPickerPage = () => {};
+};
+
+const ColorPickerPage = () => {
   const { activeMenu } = useStateContext();
   return (
     <div className={activeMenu ? " md:ml-72 " : " w-full flex-2"}>

@@ -1,10 +1,14 @@
-const Button = ({ color, bgcolor, text, borderRadius, size }) => {
+import { useStateContext } from "@/contexts/ContextProvider";
+
+const Button = ({ color, text, borderRadius, size }) => {
+	const { themeColor } = useStateContext();
+
 	return (
 		<button
 			className={`text-${{ size }} p-3 hover:drop-shadow-xl`}
 			type="button"
 			style={{
-				backgroundColor: bgcolor,
+				backgroundColor: themeColor,
 				color: color,
 				borderRadius: borderRadius,
 			}}

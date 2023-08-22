@@ -3,10 +3,10 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { GoDotFill } from "react-icons/go";
 import { earningData, SparklineAreaData } from "../../../../public/data/dummy";
 import { useStateContext } from "@/contexts/ContextProvider";
-import { Button, SparkLine, Stacked } from "@/components";
+import { Button, SparkLine, StackedChart } from "@/components";
 
 const EcomPage = () => {
-	const { activeMenu } = useStateContext();
+	const { activeMenu, themeColor } = useStateContext();
 	return (
 		<div className={activeMenu ? " md:ml-72 " : " w-full flex-2"}>
 			<div className={"flex flex-col justify-center"}>
@@ -20,7 +20,6 @@ const EcomPage = () => {
 					<div className="mt-6">
 						<Button
 							color={"white"}
-							bgcolor={"blue"}
 							text={"Download"}
 							borderRadius={"10px"}
 							size={"md"}
@@ -100,22 +99,22 @@ const EcomPage = () => {
 									height={"80px"}
 									width={"80%"}
 									data={SparklineAreaData}
-									color={"blue"}
+									color={themeColor}
 								/>
 							</div>
 
 							<div className="mt-10 ">
 								<Button
 									color={"white"}
-									bgcolor={"blue"}
 									text={"Download Report"}
 									borderRadius={"10px"}
+									size={"md"}
 								/>
 							</div>
 						</div>
 
 						<div className="flex-1 flex justify-center">
-							<Stacked width={"320px"} height={"360px"} />
+							<StackedChart width={"320px"} height={"360px"} />
 						</div>
 					</div>
 				</div>

@@ -1,7 +1,6 @@
-// "use client";
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
-import { Navbar, Sidebar, SettingIcon } from "@/components";
+import { Navbar, Sidebar, ThemeWindow } from "@/components";
 import { ContextProvider } from "@/contexts/ContextProvider";
 
 const open = Open_Sans({
@@ -23,7 +22,8 @@ export default function RootLayout({ children }) {
 			<body className={open.className}>
 				<ContextProvider>
 					<main className="flex relative dark:bg-main-dark-bg ">
-						<SettingIcon />
+						<ThemeWindow />
+
 						<Sidebar />
 
 						<div className="min-h-screen dark:bg-main-dark-bg bg-main-bg w-full">

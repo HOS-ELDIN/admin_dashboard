@@ -1,6 +1,4 @@
 @import url("https://cdn.syncfusion.com/ej2/material.css");
-/* @import "../../node_modules/@syncfusion/ej2-react-popups/styles/material.css"; */
-/* @import "../../node_modules/@syncfusion/ej2-popups/styles/material.css"; */
 
 /* tailwind */
 @tailwind base;
@@ -11,9 +9,11 @@
 	.sidebar {
 		box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
 	}
-	.nav-item,
+	.nav-item {
+		z-index: 2000;
+	}
 	.navbar {
-		z-index: 10000;
+		z-index: 1000;
 	}
 	@media screen and (max-width: 800px) {
 		.sidebar {

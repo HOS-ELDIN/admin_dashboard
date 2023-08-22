@@ -11,6 +11,7 @@ module.exports = {
 		extend: {
 			colors: {
 				exm: "#fff",
+				"theme-button": "#99abb4",
 			},
 			backgroundColor: {
 				"main-bg": "#FAFBFB",
@@ -18,6 +19,7 @@ module.exports = {
 				"secondary-dark-bg": "#33373E",
 				"light-gray": "#F7F7F7",
 				"half-transparent": "rgba(0, 0, 0, 0.5)",
+				"theme-bg": "#484B52",
 			},
 			fontSize: {
 				14: "14px",

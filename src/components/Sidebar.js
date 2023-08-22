@@ -8,7 +8,8 @@ import { links } from "../../public/data/dummy";
 import { useStateContext } from "@/contexts/ContextProvider";
 
 const Sidebar = () => {
-	const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+	const { themeColor, activeMenu, setActiveMenu, screenSize } =
+		useStateContext();
 
 	//handle closing the menu in small screens
 	const handleCloseSidebar = () => {
@@ -66,17 +67,17 @@ const Sidebar = () => {
 											key={link.name}
 											href={`/${link.name}`}
 											onClick={handleCloseSidebar}
-											className={
+											className={`hover:bg-light-gray ${
 												router == `/${link.name}` ||
 												(`/${link.name}` == "/ecommerce" && router == "/")
 													? activeLink
 													: normalLink
-											}
+											}`}
 											style={
 												router == `/${link.name}` ||
 												(`/${link.name}` == "/ecommerce" && router == "/")
-													? { backgroundColor: "blue" }
-													: { backgroundColor: "inherit" }
+													? { backgroundColor: themeColor }
+													: { color: "inherit" }
 											}
 										>
 											{link.icon}

@@ -38,7 +38,7 @@ const Navbar = () => {
 		activeMenu,
 		setActiveMenu,
 		isClicked,
-		setIsClicked,
+		themeColor,
 		handleClick,
 		screenSize,
 		setScreenSize,
@@ -68,23 +68,23 @@ const Navbar = () => {
 						title={"Menu"}
 						icon={<AiOutlineMenu />}
 						customFunc={() => setActiveMenu((prev) => !prev)}
-						color={"blue"}
-						dotColor={"red"}
+						color={themeColor}
+						dotColor={"transperant"}
 					/>
 					<div className="flex">
 						<NavButton
 							title={"cart"}
 							icon={<FiShoppingCart />}
 							customFunc={() => handleClick("cart")}
-							color={"blue"}
-							dotColor={"red"}
+							color={themeColor}
+							dotColor={"transperant"}
 						/>
 
 						<NavButton
 							title={"chat"}
 							icon={<BsChatLeft />}
 							customFunc={() => handleClick("chat")}
-							color={"blue"}
+							color={themeColor}
 							dotColor={"#03c9d7"}
 						/>
 
@@ -92,7 +92,7 @@ const Navbar = () => {
 							title={"notifications"}
 							icon={<RiNotification3Line />}
 							customFunc={() => handleClick("notification")}
-							color={"blue"}
+							color={themeColor}
 							dotColor={"#03c9d7"}
 						/>
 

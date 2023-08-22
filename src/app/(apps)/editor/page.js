@@ -10,7 +10,7 @@ import {
   Toolbar,
 } from "@syncfusion/ej2-react-richtexteditor";
 
-import { EditorData } from "../../../../public/data/dummy";
+// import { EditorData } from "../../../../public/data/dummy";
 
 import { Header } from "@/components";
 
@@ -21,7 +21,7 @@ const EditorPage = () => {
       <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl dark:text-gray-200 dark:bg-secondary-dark-bg">
         <Header category={"App"} title={"Editor"} />
         <RichTextEditorComponent>
-          <EditorData />
+          {/* <EditorData /> */}
           <Inject services={[HtmlEditor, Image, Link, QuickToolbar, Toolbar]} />
         </RichTextEditorComponent>
       </div>

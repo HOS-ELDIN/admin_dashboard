@@ -67,7 +67,7 @@ const Sidebar = () => {
 											key={link.name}
 											href={`/${link.name}`}
 											onClick={handleCloseSidebar}
-											className={`hover:bg-light-gray ${
+											className={`  ${
 												router == `/${link.name}` ||
 												(`/${link.name}` == "/ecommerce" && router == "/")
 													? activeLink
@@ -77,7 +77,7 @@ const Sidebar = () => {
 												router == `/${link.name}` ||
 												(`/${link.name}` == "/ecommerce" && router == "/")
 													? { backgroundColor: themeColor }
-													: { color: "inherit" }
+													: {}
 											}
 										>
 											{link.icon}

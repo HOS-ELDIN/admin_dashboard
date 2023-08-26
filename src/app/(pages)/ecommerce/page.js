@@ -31,7 +31,7 @@ const EcomPage = () => {
 					{earningData.map((item) => (
 						<div
 							key={item.title}
-							className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg  min-w-[140px] md:w-56 p-4 pt-9 rounded-2xl"
+							className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg min-w-[140px] md:w-56 p-4 pt-9 rounded-2xl"
 						>
 							<button
 								type="button"
@@ -53,11 +53,11 @@ const EcomPage = () => {
 			</div>
 
 			<div className="flex gap-10 flex-wrap justify-center">
-				<div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
+				<div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-6 rounded-2xl md:w-780">
 					<div className="flex justify-between">
 						<p className="font-semibold text-xl">Revenue Updates</p>
 						<div className="flex items-center gap-4">
-							<p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+							<p className="flex items-center gap-2 text-gray-400 hover:drop-shadow-xl">
 								<span>
 									<GoDotFill />
 								</span>
@@ -81,14 +81,14 @@ const EcomPage = () => {
 										23%
 									</span>
 								</p>
-								<p className="text-gray-500 mt-1">Budget</p>
+								<p className="text-gray-400 mt-1">Budget</p>
 							</div>
 
 							<div className="mt-8">
 								<p>
 									<span className="text-3xl font-semibold">$48,438</span>
 								</p>
-								<p className="text-gray-500 mt-1">Expense</p>
+								<p className="text-gray-400 mt-1">Expense</p>
 							</div>
 
 							<div className="mt-5 spark  h-20">

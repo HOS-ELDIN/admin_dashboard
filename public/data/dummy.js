@@ -2994,6 +2994,7 @@ export const lineCustomSeries = [
 		width: "2",
 		marker: { visible: true, width: 10, height: 10 },
 		type: "Line",
+		fill: "red",
 	},
 
 	{
@@ -3072,6 +3073,7 @@ export const stackedCustomSeries = [
 		name: "Budget",
 		type: "StackingColumn",
 		background: "blue",
+		// fill: "green",
 	},
 
 	{
@@ -3081,6 +3083,7 @@ export const stackedCustomSeries = [
 		name: "Expense",
 		type: "StackingColumn",
 		background: "red",
+		// fill: "orange",
 	},
 ];
 

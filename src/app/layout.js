@@ -5,11 +5,11 @@ import { Navbar, Sidebar, ThemeWindow } from "@/components";
 import { ContextProvider } from "@/contexts/ContextProvider";
 
 const open = Open_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  style: "normal",
-  display: "swap",
-  variable: "--font-open",
+	subsets: ["latin"],
+	weight: ["300", "400", "500", "600", "700", "800"],
+	style: "normal",
+	display: "swap",
+	variable: "--font-open",
 });
 
 // export const metadata = {
@@ -18,22 +18,22 @@ const open = Open_Sans({
 // };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en" className={`${open.variable} `} id="base-html">
-      <body className={open.className}>
-        <ContextProvider>
-          <main className="flex relative dark:bg-main-dark-bg ">
-            <ThemeWindow />
+	return (
+		<html lang="en" className={`${open.variable} `} id="base-html">
+			<body className={open.className}>
+				<ContextProvider>
+					<main className="flex relative dark:bg-main-dark-bg ">
+						<ThemeWindow />
 
-            <Sidebar />
+						<Sidebar />
 
-            <div className="min-h-screen dark:bg-main-dark-bg bg-main-bg w-full">
-              <Navbar />
-              <div className="md:mt-4 mt-16">{children}</div>
-            </div>
-          </main>
-        </ContextProvider>
-      </body>
-    </html>
-  );
+						<div className="min-h-screen dark:bg-main-dark-bg bg-main-bg w-full">
+							<Navbar />
+							<div className="md:mt-4 mt-16">{children}</div>
+						</div>
+					</main>
+				</ContextProvider>
+			</body>
+		</html>
+	);
 }

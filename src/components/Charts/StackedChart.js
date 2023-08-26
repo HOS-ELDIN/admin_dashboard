@@ -16,7 +16,11 @@ import {
 	stackedPrimaryYAxis,
 } from "../../../public/data/dummy";
 
+import { useStateContext } from "@/contexts/ContextProvider";
+
 const StackedChart = ({ width, height }) => {
+	const { currentMode, themeColor } = useStateContext();
+
 	return (
 		// <div />
 		<ChartComponent
@@ -27,12 +31,25 @@ const StackedChart = ({ width, height }) => {
 			primaryYAxis={stackedPrimaryYAxis}
 			chartArea={{ border: { width: 0 } }}
 			tooltip={{ enable: true }}
-			legendSettings={{ background: "white" }}
+			legendSettings={{
+				textStyle: { color: currentMode === "dark" ? "#fff" : "black" },
+			}}
 		>
 			<Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />
 			<SeriesCollectionDirective>
 				{stackedCustomSeries.map((item, index) => (
-					<SeriesDirective key={index} {...item} />
+					<SeriesDirective
+						key={index}
+						{...item}
+						// ! fix the fill colors the small to be theme color and the long to be gray if light and white if dark
+						fill={
+							index === 0
+								? themeColor
+								: currentMode === "dark"
+								? "#9ca3af"
+								: "#404041"
+						}
+					/>
 				))}
 			</SeriesCollectionDirective>
 		</ChartComponent>

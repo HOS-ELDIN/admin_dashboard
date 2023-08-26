@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const StateContext = createContext();
 
@@ -26,13 +26,10 @@ export const ContextProvider = ({ children }) => {
 
 		if (e.target.value === "dark") {
 			head.classList.add(e.target.value);
-			console.log(e.target.value);
 		}
 		if (e.target.value === "light") {
 			head.classList.remove("dark");
-			console.log(e.target.value);
 		}
-		// console.log(e.target.value);
 	};
 	const setColor = (color) => {
 		setThemeColor(color);
@@ -43,6 +40,25 @@ export const ContextProvider = ({ children }) => {
 	const handleClick = (key) => {
 		setIsClicked({ ...initialState, [key]: "true" });
 	};
+	const handleClosingClick = (key) => {
+		setIsClicked({ ...initialState, [key]: false });
+		// console.log(`${key} is closing`);
+	};
+
+	useEffect(() => {
+		setThemeColor(localStorage.getItem("themeColor"));
+
+		let savedTheme = localStorage.getItem("themeMode");
+		setCurrentMode(savedTheme);
+		const head = document.getElementById("base-html");
+
+		if (savedTheme === "dark") {
+			head.classList.add(savedTheme);
+		}
+		if (savedTheme === "light") {
+			head.classList.remove("dark");
+		}
+	}, []);
 
 	return (
 		<StateContext.Provider
@@ -62,6 +78,7 @@ export const ContextProvider = ({ children }) => {
 				setColor,
 				activeThemeSettings,
 				setActiveThemeSettings,
+				handleClosingClick,
 			}}
 		>
 			{children}

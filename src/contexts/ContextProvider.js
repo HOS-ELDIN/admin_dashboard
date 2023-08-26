@@ -46,17 +46,20 @@ export const ContextProvider = ({ children }) => {
 	};
 
 	useEffect(() => {
-		setThemeColor(localStorage.getItem("themeColor"));
-
-		let savedTheme = localStorage.getItem("themeMode");
-		setCurrentMode(savedTheme);
-		const head = document.getElementById("base-html");
-
-		if (savedTheme === "dark") {
-			head.classList.add(savedTheme);
+		if (localStorage.getItem("themeColor")) {
+			setThemeColor(localStorage.getItem("themeColor"));
 		}
-		if (savedTheme === "light") {
-			head.classList.remove("dark");
+		if (localStorage.getItem("themeMode")) {
+			let savedTheme = localStorage.getItem("themeMode");
+			setCurrentMode(savedTheme);
+			const head = document.getElementById("base-html");
+
+			if (savedTheme === "dark") {
+				head.classList.add(savedTheme);
+			}
+			if (savedTheme === "light") {
+				head.classList.remove("dark");
+			}
 		}
 	}, []);
 
